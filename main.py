@@ -18,8 +18,6 @@ alice() {
 Alice in wonderland care your aliases. Alice for aliases
 """
 
-# TODO: debugging and add alias editor
-# commit this shit, create pkg
 
 import os
 import re
@@ -34,16 +32,17 @@ import subprocess
 
 from alice import Alice
 from menu import Menu
+from alice_conf import *
 
 
-HOME = os.path.expanduser('~')
+# HOME = os.path.expanduser('~')
 alice = Alice(HOME)
 ALIASES = alice.get_aliases()
 MAIN_MENU = ['Edit alias list', 'Choose alias', 'Exit']
-# EDITOR = os.environ.get('EDITOR') if os.environ.get('EDITOR') else 'vim'
-EDITOR = 'subl'
 
 def main(stdscr):
+    # Source your shell rc file
+    alice.source_aliases()
     curses.curs_set(0)
     curses.init_pair(1, curses.COLOR_BLACK, curses.COLOR_WHITE)
     curses.init_pair(2, curses.COLOR_BLACK, curses.COLOR_BLUE)

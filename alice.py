@@ -29,8 +29,12 @@ class Alice:
         except Exception as e:
             raise e
 
-    def alias_source():
-        pass
+    def source_aliases(self):
+        try:
+            cmd = f'source {self.home}/.{str(os.environ["SHELL"][9:])}rc'
+            subprocess.call([os.environ["SHELL"],"-ic", cmd])
+        except Exception as e:
+            raise e
 
     def edit_aleases(self, editor):
         mode = 'a'
