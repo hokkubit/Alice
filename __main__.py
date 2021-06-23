@@ -1,23 +1,5 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-"""
-Simple script to define your aliases.
-Also your .bash_aliases or .zsh_aliases file must exist!
-Put this lines into your shell rc
-
-if [ -f ~/.zsh_aliases ]; then
-    . ~/.zsh_aliases
-fi
-
-You can wrap this script in a function in your command shell rc file as sample:
-alice() {
-    python3 ~/path/to/alias_manager.py $@
-    source ~/.zshrc
-}
-Alice in wonderland care your aliases. Alice for aliases
-"""
-
+    # -*- coding: utf-8 -*-
 
 import os
 import re

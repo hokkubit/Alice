@@ -13,7 +13,6 @@ class Alice:
         self.home = home
         self.config_path = f'{self.home}/.{str(os.environ["SHELL"][9:])}_aliases'
 
-    # @staticmethod
     def get_aliases(self):
         aliases = OrderedDict()
         mode = 'r' if os.path.exists(self.config_path) else 'a+'
