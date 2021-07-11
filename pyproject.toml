@@ -1,4 +1,8 @@
+[tool.flit.scripts]
+alice = "alice:main"
+
 [build-system]
+requires-python = ">=3.7"
 requires = ["flit_core >=2,<4"]
 build-backend = "flit_core.buildapi"
 
