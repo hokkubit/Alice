@@ -8,6 +8,7 @@ build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
 module = "alice"
+dist-name = "alice_in_shell"
 author = "Denis Aseev"
 author-email = "brerfox33@gmail.com"
 home-page = "https://github.com/hokkubit/Alice"

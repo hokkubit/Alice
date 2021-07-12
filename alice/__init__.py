@@ -17,4 +17,4 @@ alice() {
 Alice in Wonderland care your aliases
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
