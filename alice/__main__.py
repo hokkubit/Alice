@@ -3,7 +3,7 @@
 
 """Execute main and secondary menu"""
 
-__version__ = "0.1.14"
+__version__ = "0.1.15"
 
 import os
 import re
@@ -15,14 +15,22 @@ import subprocess
 
 # import alice.menu as menu_list
 
-from alice.config import HOME, EDITOR
-from alice.alice_in_shell import Alice_in_shell as wonderland
+# from alice.config import HOME, EDITOR
+from alice_in_shell import Alice_in_shell as wonderland
 
+
+# User home dir
+HOME = os.path.expanduser("~")
+
+# By default is system editor. You can define your prefered editor as Sublime, VS Code etc.
+
+EDITOR = os.environ.get("EDITOR") if os.environ.get("EDITOR") else "vim"
+# EDITOR = "subl"
+# EDITOR = "code"
 
 alice = wonderland(HOME)
 ALIASES = alice.get_aliases()
 MAIN_MENU = ["Edit alias list", "Choose alias", "Exit"]
-
 
 
 class Menu:
