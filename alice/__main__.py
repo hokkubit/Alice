@@ -4,7 +4,7 @@
 
 """Execute main and secondary menu"""
 
-__version__ = "0.1.17"
+__version__ = "0.1.18"
 
 import os
 import re
@@ -31,8 +31,7 @@ EDITOR = os.environ.get("EDITOR") if os.environ.get("EDITOR") else "vim"
 # EDITOR = "subl"
 # EDITOR = "code"
 
-alice = Alice_in_shell(HOME)
-ALIASES = alice.get_aliases()
+
 MAIN_MENU = ["Edit alias list", "Choose alias", "Exit"]
 
 
@@ -151,6 +150,8 @@ class Menu:
                 print("Sorry, screen too small")
 
 
+alice = Alice_in_shell(HOME)
+ALIASES = alice.get_aliases()
 
 def main(stdscr):
     alice.source_aliases()
