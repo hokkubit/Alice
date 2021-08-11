@@ -1,3 +1,5 @@
+#!/bin/env python3
+
 """
 Simple script to define your aliases.
 Also your .bash_aliases or .zsh_aliases file must be exist,

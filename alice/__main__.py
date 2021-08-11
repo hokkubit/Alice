@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
+
 # -*- coding: utf-8 -*-
 
 """Execute main and secondary menu"""
 
-__version__ = "0.1.15"
+__version__ = "0.1.16"
 
 import os
 import re
