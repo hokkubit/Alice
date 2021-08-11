@@ -3,7 +3,7 @@
 
 """Execute main and secondary menu"""
 
-__version__ = "0.1.9"
+__version__ = "0.1.11"
 
 import os
 import re
@@ -12,7 +12,7 @@ import curses
 
 import subprocess
 
-import menu as menu_list
+import alice.menu as menu_list
 
 from config import HOME, EDITOR
 from alice_in_shell import Alice_in_shell as wonderland
