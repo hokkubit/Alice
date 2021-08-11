@@ -4,7 +4,7 @@
 
 """Execute main and secondary menu"""
 
-__version__ = "0.1.18"
+__version__ = "0.1.19"
 
 import os
 import re
@@ -150,10 +150,10 @@ class Menu:
                 print("Sorry, screen too small")
 
 
-alice = Alice_in_shell(HOME)
-ALIASES = alice.get_aliases()
 
 def main(stdscr):
+    alice = Alice_in_shell(HOME)
+    ALIASES = alice.get_aliases()
     alice.source_aliases()
     curses.curs_set(0)
     curses.init_pair(1, curses.COLOR_BLACK, curses.COLOR_WHITE)
