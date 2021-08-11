@@ -1,5 +1,5 @@
 [tool.flit.scripts]
-alice = "alice-py:__main__"
+alice = "alice:__main__"
 
 [build-system]
 requires-python = ">=3.7"
