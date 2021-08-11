@@ -1,5 +1,5 @@
 [tool.flit.scripts]
-alice = "alice:main"
+alice = "alice-py:__main__"
 
 [build-system]
 requires-python = ">=3.7"
@@ -7,7 +7,7 @@ requires = ["flit_core >=2,<4"]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
-module = "alice"
+module = "alice-py"
 dist-name = "alice_in_shell"
 author = "Denis Aseev"
 author-email = "brerfox33@gmail.com"

@@ -3,7 +3,7 @@
 
 """Execute main and secondary menu"""
 
-__version__ = "0.1.7"
+__version__ = "0.1.8"
 
 import os
 import re
