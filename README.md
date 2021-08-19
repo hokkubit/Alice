@@ -5,12 +5,9 @@ Alice is console utilite which helps you manage and define your aliases easy.
 
 ## Installation
 
-```shell
-<!-- pip install alice -->
-```
+Just clone or download this repo. 
 
-Put this lines into your shell rc
-
+Put this lines into your shell rc file
 
 *bash*
 
