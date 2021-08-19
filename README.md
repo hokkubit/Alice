@@ -36,7 +36,7 @@ You can wrap this script in a function in your command shell rc file as sample:
 
 ```shell
 alice() {
-    python3 ~/path/to/Alice/__main.py__ $@
+    python3 ~/path/to/alice-py/alice $@
     source ~/.bashrc
 }
 ```
@@ -45,7 +45,7 @@ alice() {
 
 ```shell
 alice() {
-    python3 ~/follow/the/white_rabbit/Alice/main.py $@
+    python3 ~/path/to/alice-py/alice $@
     source ~/.zshrc
 }
 ```
