@@ -1,23 +1,27 @@
 #!/usr/bin/env python3
-
 # -*- coding: utf-8 -*-
 
 """Execute main and secondary menu"""
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 
 import os
 import re
 import curses
 import subprocess
 
+
 from menu import Menu
 from alice_in_shell import Alice_in_shell
 
-from config import HOME, EDITOR
+from config import HOME, EDITOR, LANG
 
+def get_menu_lang(lang):
+    return {
+        'ru_RU': ('Редактировать алиасы', 'Выполнить алиас', 'Выход')
+    }.get(lang, ('Edit alias list', 'Choose alias', 'Exit'))
 
-MAIN_MENU = ["Edit alias list", "Choose alias", "Exit"]
+MAIN_MENU = get_menu_lang(LANG)
 
 def main(stdscr):
     alice = Alice_in_shell(HOME)
@@ -36,6 +40,7 @@ def main(stdscr):
     #   LOL  LOL  |   LLOL   |  LOLLOL
     # ------------+----------+-------------
     # BLACK MAGIC FULL FEATURED ENABLED
+
     def display_rows(
         menu, row_id: int, page_counter: int, menu_mode: str, height, width
     ):
@@ -49,7 +54,7 @@ def main(stdscr):
             while True:
                 key = stdscr.getch()
                 stdscr.clear()
-                # TODO: Use switch, Luke!
+                # Use switch, Luke! ))
                 if key == curses.KEY_UP and current_row_id > 0:
                     current_row_id -= 1
                     stdscr.refresh()
@@ -73,7 +78,6 @@ def main(stdscr):
                 ):
                     alice.edit_aleases(EDITOR)
                     stdscr.refresh()
-                    display_rows(MAIN_MENU, 0, 1, "main", height, width)
 
                 # load first page of aliases
                 elif (

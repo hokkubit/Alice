@@ -1,4 +1,5 @@
 import os
+import locale
 
 # User home dir
 HOME = os.path.expanduser("~")
@@ -7,3 +8,5 @@ HOME = os.path.expanduser("~")
 EDITOR = os.environ.get("EDITOR") if os.environ.get("EDITOR") else "vim"
 # EDITOR = "subl"
 # EDITOR = "code"
+
+LANG = locale.getdefaultlocale()[0]
