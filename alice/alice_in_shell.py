@@ -5,11 +5,13 @@ import subprocess
 from collections import OrderedDict
 from math import ceil
 
+from config import SHELL_PREFIX
+
 class Alice_in_shell:
     def __init__(self, home):
         # shell & aliases file path
         self.home = home
-        self.config_path = f'{self.home}/.{str(os.environ["SHELL"][9:])}_aliases'
+        self.config_path = f'{self.home}/.{SHELL_PREFIX}_aliases'
 
     def get_aliases(self):
         aliases = OrderedDict()
@@ -28,7 +30,7 @@ class Alice_in_shell:
 
     def source_aliases(self):
         try:
-            cmd = f'source {self.home}/.{str(os.environ["SHELL"][9:])}rc'
+            cmd = f'source {self.config_path}'
             subprocess.call([os.environ["SHELL"], "-ic", cmd])
         except Exception as e:
             raise e
